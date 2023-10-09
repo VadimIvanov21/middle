@@ -33,3 +33,17 @@ while (number > 0){
 }
 return x;
 }
+
+int itc_max_num(long long number) {
+    if (number < 0) {
+        number *= -1;
+    }
+    int maxi = 0, digit = 0;
+    while (number > 0) {
+        digit = number % 10;
+        if (digit > maxi) {
+            maxi = digit;
+        }
+        number /= 10;
+    }
+    return maxi;
